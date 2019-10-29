@@ -61,3 +61,15 @@ reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLo
 reg save HKLM\SAM C:\sam
 reg save HKLM\SYSTEM C:\system
 re save HKLM\SECURITY C:\security
+
+#shares
+Get-DomainFileserver
+Get-DomainDFSShare
+
+Find-DomainShare -CheckShareAccess -ComputerLDAPFilter "(name=<computername>)" -ComputerSearchBase "LDAP://OU=,DC=,DC=" -ComputerOperatingSystem "*2012*" -ComputerSiteName "*<site>*" | Where {$_.name -notlike "*$"} | select name,computername
+
+Find-InterestingDomainACL -resolveguid | Where {$_.Identityreferencename -notlike '*$'} | Select identityreferencename,activedirectoryrights,objectdn,objectacetype |fl -wrap -autosize
+Get-DomainObject -ldapfilter "(name={GUID})'| select displayname,gpcfilesyspath
+
+Find-InterestingFile -Include <filetype> -path <\\path> -CheckWriteAccess -ExcludeFolders
+
